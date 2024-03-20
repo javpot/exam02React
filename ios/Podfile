@@ -37,6 +37,7 @@ target 'exam02React' do
     :flipper_configuration => flipper_config,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
+    pod 'react-native-notifications', :podspec => '../node_modules/react-native-notifications/react-native-notifications.podspec'
   )
 
   target 'exam02ReactTests' do

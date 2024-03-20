@@ -41,6 +41,8 @@
 		5709B34CF0A7D63546082F79 /* Pods-exam02React.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exam02React.release.xcconfig"; path = "Target Support Files/Pods-exam02React/Pods-exam02React.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-exam02React-exam02ReactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exam02React-exam02ReactTests.debug.xcconfig"; path = "Target Support Files/Pods-exam02React-exam02ReactTests/Pods-exam02React-exam02ReactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-exam02React.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-exam02React.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7424B1BB2BAB6FD2005DC107 /* idServiceModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = idServiceModule.h; sourceTree = "<group>"; };
+		7424B1BC2BAB7107005DC107 /* idServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = idServiceManager.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = exam02React/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-exam02React-exam02ReactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exam02React-exam02ReactTests.release.xcconfig"; path = "Target Support Files/Pods-exam02React-exam02ReactTests/Pods-exam02React-exam02ReactTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* exam02React */ = {
 			isa = PBXGroup;
 			children = (
+				7424B1BA2BAB6F76005DC107 /* module */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -104,6 +107,15 @@
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-exam02React-exam02ReactTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7424B1BA2BAB6F76005DC107 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				7424B1BB2BAB6FD2005DC107 /* idServiceModule.h */,
+				7424B1BC2BAB7107005DC107 /* idServiceManager.m */,
+			);
+			name = module;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -580,10 +592,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -651,10 +660,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
